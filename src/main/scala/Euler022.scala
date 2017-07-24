@@ -21,7 +21,7 @@ object Euler022 {
       .sum
   }
 
-  val names = Source
+  val names: Array[String] = Source
     .fromFile("resources/names.txt")
     .mkString
     .split(",")
