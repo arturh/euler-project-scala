@@ -27,10 +27,10 @@ object Euler025 {
     println(s"solution: $solution")
   }
 
-  def solution: BigInt = {
+  def solution: Int = {
     fibonacciNumbers
       .zipWithIndex
-      .find(_._1.toString.length > 1000)
+      .find { case (n: BigInt, index: Int) => n.toString.length > 1000 }
       .get
       ._2
 
