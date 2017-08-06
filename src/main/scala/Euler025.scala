@@ -31,8 +31,8 @@ object Euler025 {
     fibonacciNumbers
       .zipWithIndex
       .find { case (n: BigInt, index: Int) => n.toString.length > 1000 }
+      .map { case (n: BigInt, index: Int) => index}
       .get
-      ._2
 
   }
 
@@ -41,7 +41,8 @@ object Euler025 {
       BigInt(1) #::
       fibonacciNumbers
         .zip(fibonacciNumbers.tail)
-        .map(n => {
-          n._1 + n._2
-        })
+        .map {
+          case (previousFibonacciNumber: BigInt, previousFibonacciNumber2: BigInt) =>
+            previousFibonacciNumber + previousFibonacciNumber2
+        }
 }
