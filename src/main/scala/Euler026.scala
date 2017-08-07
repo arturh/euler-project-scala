@@ -43,7 +43,7 @@ object Euler026 {
 
     var order = 1
     var moduloExponent = a
-    
+
     while (moduloExponent != 1) {
       order += 1
       moduloExponent = (moduloExponent * a) % n
